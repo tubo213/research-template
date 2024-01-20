@@ -3,7 +3,7 @@ name = "research-template"
 version = "0.1.0"
 description = "Add a short description here"
 authors = [
-    { name = "tubo213", email = "" }
+    { name = "tubo213", email = "hoge@gmail.com" }
 ]
 dependencies = [
     "numpy>=1.24.4",
@@ -23,10 +23,15 @@ dependencies = [
     "streamlit>=1.25.0",
 ]
 readme = "README.md"
-requires-python = ">= 3.11"
+requires-python = ">= 3.10"
+
+[[tool.rye.sources]]
+name = "torch"
+url = "https://download.pytorch.org/whl/cu121"
+type = "index"
 
 [build-system]
-requires = ["hatchling"]
+requires = ["hatchling<=1.18.0"]
 build-backend = "hatchling.build"
 
 [tool.rye]
