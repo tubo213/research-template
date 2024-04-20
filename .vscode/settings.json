@@ -3,27 +3,26 @@
   "editor.rulers": [
     99
   ],
-  // python path
+  "notebook.formatOnSave.enabled": true,
+  "notebook.formatOnCellExecution": true,
+  "notebook.codeActionsOnSave": {
+    "notebook.source.fixAll.ruff": true,
+    "notebook.source.organizeImports.ruff": true
+  },
   "python.defaultInterpreterPath": "${workspaceFolder}/.venv/bin/python",
   "[python]": {
     "editor.codeActionsOnSave": {
-      // isortの並び替えをRuffで実行
-      "source.organizeImports": true
+      "source.fixAll.ruff": true,
+      "source.organizeImports.ruff": true
     },
-    "editor.defaultFormatter": "ms-python.black-formatter",
+    "editor.defaultFormatter": "charliermarsh.ruff",
     "editor.formatOnSave": true
   },
   "ruff.path": [
     "${workspaceFolder}/.venv/bin/ruff"
   ],
-  "black-formatter.path": [
-    "${workspaceFolder}/.venv/bin/black"
-  ],
-  "mypy-type-checker.path": [
-    "${workspaceFolder}/.venv/bin/mypy"
+  "ruff.format.args": [
+    "--config=pyproject.toml"
   ],
   "files.autoSave": "afterDelay",
-  "flake8.args": [
-    "--max-line-length=99",
-  ]
 }
