@@ -1,0 +1,16 @@
+{
+    "recommendations": [
+        // Python
+        "ms-python.python",
+        // Jupyter
+        "ms-toolsai.jupyter",
+        // ruff
+        "charliermarsh.ruff",
+        // toml
+        "tamasfe.even-better-toml",
+        // Markdown
+        "yzhang.markdown-all-in-one",
+        // Copilot
+        "GitHub.copilot"
+    ]
+}
