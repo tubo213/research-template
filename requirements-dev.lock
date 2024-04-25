@@ -204,6 +204,9 @@ mpmath==1.3.0
 multidict==6.0.5
     # via aiohttp
     # via yarl
+mypy==1.10.0
+mypy-extensions==1.0.0
+    # via mypy
 nbclient==0.10.0
     # via nbconvert
 nbconvert==7.16.3
@@ -373,6 +376,7 @@ tinycss2==1.2.1
     # via nbconvert
 tomli==2.0.1
     # via jupyterlab
+    # via mypy
 torch==2.1.1+cu121
     # via pytorch-lightning
     # via research-template
@@ -414,6 +418,7 @@ typing-extensions==4.8.0
     # via async-lru
     # via ipython
     # via lightning-utilities
+    # via mypy
     # via pytorch-lightning
     # via torch
 tzdata==2024.1
