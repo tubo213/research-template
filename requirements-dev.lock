@@ -86,6 +86,7 @@ frozenlist==1.4.1
     # via aiohttp
     # via aiosignal
 fsspec==2023.4.0
+    # via lightning
     # via pytorch-lightning
     # via torch
 gitdb==4.0.11
@@ -183,7 +184,10 @@ jupyterlab-widgets==3.0.10
     # via ipywidgets
 kiwisolver==1.4.5
     # via matplotlib
+lightning==2.2.3
+    # via research-template
 lightning-utilities==0.11.2
+    # via lightning
     # via pytorch-lightning
     # via torchmetrics
 loguru==0.7.2
@@ -227,6 +231,7 @@ notebook-shim==0.2.4
     # via notebook
 numpy==1.26.3
     # via contourpy
+    # via lightning
     # via matplotlib
     # via pandas
     # via pytorch-lightning
@@ -245,6 +250,7 @@ packaging==22.0
     # via jupyter-server
     # via jupyterlab
     # via jupyterlab-server
+    # via lightning
     # via lightning-utilities
     # via matplotlib
     # via nbconvert
@@ -299,11 +305,12 @@ python-dateutil==2.9.0.post0
 python-json-logger==2.0.7
     # via jupyter-events
 pytorch-lightning==2.2.2
-    # via research-template
+    # via lightning
 pytz==2024.1
     # via pandas
 pyyaml==6.0.1
     # via jupyter-events
+    # via lightning
     # via omegaconf
     # via pytorch-lightning
     # via wandb
@@ -378,10 +385,12 @@ tomli==2.0.1
     # via jupyterlab
     # via mypy
 torch==2.1.1+cu121
+    # via lightning
     # via pytorch-lightning
     # via research-template
     # via torchmetrics
 torchmetrics==1.0.3
+    # via lightning
     # via pytorch-lightning
 tornado==6.4
     # via ipykernel
@@ -391,6 +400,7 @@ tornado==6.4
     # via notebook
     # via terminado
 tqdm==4.64.1
+    # via lightning
     # via pytorch-lightning
     # via research-template
 traitlets==5.14.3
@@ -417,6 +427,7 @@ typing-extensions==4.8.0
     # via anyio
     # via async-lru
     # via ipython
+    # via lightning
     # via lightning-utilities
     # via mypy
     # via pytorch-lightning
