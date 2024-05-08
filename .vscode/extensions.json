@@ -6,6 +6,8 @@
         "ms-toolsai.jupyter",
         // ruff
         "charliermarsh.ruff",
+        // mypy
+        "ms-python.mypy-type-checker",
         // toml
         "tamasfe.even-better-toml",
         // Markdown
