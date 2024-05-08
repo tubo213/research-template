@@ -75,7 +75,9 @@ select = [
     "W", # pycodestyle warnings
     "I", # isort
 ]
-ignore = []
+ignore = [
+    "E501", # line too long
+]
 
 [tool.ruff]
 include = ["*.ipynb", "*.py"]
