@@ -25,10 +25,12 @@
     "--config=pyproject.toml"
   ],
   "mypy-type-checker.path": [
-    "${workspaceFolder}/.venv/bin/mypy"
+    "rye",
+    "run",
+    "mypy"
   ],
   "mypy-type-checker.args": [
-    "--config=${workspaceFolder}/pyproject.toml"
+    "--config-file=pyproject.toml"
   ],
   "files.autoSave": "afterDelay",
 }
