@@ -25,9 +25,7 @@
     "--config=pyproject.toml"
   ],
   "mypy-type-checker.path": [
-    "rye",
-    "run",
-    "mypy"
+    "${workspaceFolder}/.venv/bin/mypy"
   ],
   "mypy-type-checker.args": [
     "--config-file=pyproject.toml"
