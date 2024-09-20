@@ -2,11 +2,11 @@
 
 # ruffでフォーマットを行う
 format:
-	rye run ruff format
+	uv run ruff format; uv run ruff check --fix
 
 # ruffでlintとフォーマットを行う
 lint:
-	rye run ruff check --fix; rye run mypy . --config-file pyproject.toml
+	uv run ruff check --fix; uv run mypy . --config-file pyproject.toml
 
 # bin配下のシェルスクリプトを全て実行する
 run-all:
