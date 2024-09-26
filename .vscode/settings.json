@@ -4,6 +4,9 @@
     99
   ],
   "files.autoSave": "afterDelay",
+  "python.analysis.inlayHints.callArgumentNames": "all",
+  "python.analysis.inlayHints.functionReturnTypes": true,
+  "python.analysis.inlayHints.variableTypes": true,
   // notebookのformatを有効にする
   "notebook.formatOnSave.enabled": true,
   "notebook.formatOnCellExecution": true,
