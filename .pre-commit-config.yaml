@@ -1,0 +1,47 @@
+# ref: https://github.com/osushinekotan/uv-template/blob/main/%7B%7Bcookiecutter.project_slug%7D%7D/.pre-commit-config.yaml
+repos:
+  # python linter and formatter
+  - repo: local # use local ruff
+    hooks:
+      # Run the linter.
+      - id: ruff
+        name: ruff-lint
+        types_or: [python, jupyter]
+        entry: uv run ruff check . --fix
+        language: python
+
+      # Run the formatter.
+      - id: ruff-format
+        name: ruff-format
+        entry: uv run ruff format .
+        language: python
+        types_or: [python, jupyter]
+
+  # yaml, json formatting
+  - repo: https://github.com/pre-commit/mirrors-prettier
+    rev: v4.0.0-alpha.8
+    hooks:
+      - id: prettier
+        types: [yaml, json]
+
+  # md formatting
+  - repo: https://github.com/executablebooks/mdformat
+    rev: 0.7.17
+    hooks:
+      - id: mdformat
+        args: ["--number"] # ファイル内の見出しに番号を自動的に付ける
+        additional_dependencies:
+          - mdformat-gfm
+          - mdformat-tables
+          - mdformat_frontmatter
+
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.5.0
+    hooks:
+      # list of supported hooks: https://pre-commit.com/hooks.html
+      - id: trailing-whitespace # 行末の不要な空白を削除
+      - id: end-of-file-fixer # ファイルの末尾に改行を保証
+      - id: detect-private-key # プライベートキーがコミットされていないかをチェック
+      - id: check-toml # TOMLファイルの構文エラーをチェック
+      - id: check-case-conflict # ファイル名の大文字小文字の競合を検出
+      - id: check-added-large-files # 特定のサイズを超える大きなファイルが追加された場合に警告

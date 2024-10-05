@@ -35,7 +35,12 @@ index-url = "https://download.pytorch.org/whl/cu121"
 
 [tool.uv]
 managed = true
-dev-dependencies = ["jupyter>=1.1.1", "mypy==1.11.2", "ruff>=0.6.6"]
+dev-dependencies = [
+    "jupyter>=1.1.1",
+    "mypy==1.11.2",
+    "pre-commit>=3.8.0",
+    "ruff>=0.6.9",
+]
 
 [tool.mypy]
 allow_redefinition = true
