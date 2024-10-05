@@ -20,3 +20,9 @@ $ pip install uv
 ```
 uv sync
 ```
+
+3. activate pre-commit
+
+```
+uv run pre-commit install
+```
