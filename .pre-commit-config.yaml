@@ -1,0 +1,36 @@
+# ref: https://github.com/osushinekotan/uv-template/blob/main/%7B%7Bcookiecutter.project_slug%7D%7D/.pre-commit-config.yaml
+repos:
+  # python linter and formatter
+  - repo: local # use local ruff
+    hooks:
+      # Run the linter.
+      - id: ruff
+        name: ruff-lint
+        types_or: [python, jupyter]
+        entry: ruff check . --fix
+        language: python
+
+      # Run the formatter.
+      - id: ruff-format
+        name: ruff-format
+        entry: ruff format .
+        language: python
+        types_or: [python, jupyter]
+
+  # yaml, json formatting
+  - repo: https://github.com/pre-commit/mirrors-prettier
+    rev: v4.0.0-alpha.8
+    hooks:
+      - id: prettier
+        types: [yaml, json]
+
+  # md formatting
+  - repo: https://github.com/executablebooks/mdformat
+    rev: 0.7.17
+    hooks:
+      - id: mdformat
+        args: ["--number"] # ファイル内の見出しに番号を自動的に付ける
+        additional_dependencies:
+          - mdformat-gfm
+          - mdformat-tables
+          - mdformat_frontmatter
