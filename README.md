@@ -21,13 +21,13 @@ $ pip install uv
 uv sync
 ```
 
-if you need to install pytorch(cpu) and torchvision, run the following command.
+if you need to install Pytorch(cpu) and torchvision, run the following command.
 
 ```
 uv sync --extra cpu
 ```
 
-if you need to install pytorch(cu121) and torchvision, run the following command.
+if you need to install Pytorch(cu121) and torchvision, run the following command.
 
 ```
 uv sync --extra cu121
